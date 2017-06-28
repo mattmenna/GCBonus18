@@ -1,13 +1,18 @@
 package com.company;
 
+/*
+The application prompts the user to choose between two options.
+The application will create a story based on user selected options.
+ */
+
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+
         String name;
-        int caseNumber;
+        int caseNumber = 0;
         char playGame;
 
         Scanner scnr = new Scanner(System.in);
@@ -20,13 +25,15 @@ public class Main {
 
         if (playGame == 'y') {
 
-
             switch (caseNumber) {
                 case 1:
                     break;
                 case 2:
                     break;
                 case 3:
+                    break;
+                default:
+                    break;
             } // end Switch
         } // game loop
 
