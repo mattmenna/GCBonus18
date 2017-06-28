@@ -12,7 +12,7 @@ public class Main {
     public static void main(String[] args) {
 
         String name;
-        int caseNumber = 0;
+        String caseNumber;
         char playGame;
 
         Scanner scnr = new Scanner(System.in);
@@ -24,19 +24,27 @@ public class Main {
         playGame = scnr.nextLine().charAt(0);
 
         if (playGame == 'y') {
+            System.out.println("Excellent! You are walking across a field and you encounter a fire-breathing dragon!");
+            System.out.println("What would you do?");
+            caseNumber = scnr.nextLine().toLowerCase();
+            monsterSelect(caseNumber);
 
-            switch (caseNumber) {
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                default:
-                    break;
-            } // end Switch
-        } // game loop
+        } // end Switch
+    } // Main loop
 
-    } // end Main
+
+    private static void monsterSelect(String i) {
+        switch (i) {
+            case "face the best":
+                System.out.println("You faced the beast");
+                break;
+            case "run away":
+                System.out.println("You ran away");
+                break;
+            default:
+                break;
+        } // end of switch
+
+    } // end of method
 
 } // end Class
